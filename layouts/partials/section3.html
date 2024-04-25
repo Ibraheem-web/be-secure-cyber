@@ -1,0 +1,45 @@
+{{- $section3 := .Site.Params.section3 }}
+{{- $title := index $section3 "title" }}
+{{- $subtitle := index $section3 "subtitle" }}
+{{- $features := index $section3 "features" }}
+<section class="section is-medium" id="section3">
+    <div class="container">
+        <div class="columns is-desktop">
+            <div class="column is-half mt-60">
+                <div class="media-left">
+                    <h3 class="subtitle is-5 is-muted mb-2">{{ $subtitle }}</h3>
+                    <div class="divider"></div>
+                    <h1 class="title section-title py-5">{{ $title }}</h1>
+                </div>
+                {{- range $features }}
+                <article class="media icon-box">
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <span class="icon-box-title">{{ .title }}</span>
+
+                                <span class="icon-box-text">{{ .text | markdownify }}</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                {{- end }}
+                {{ with $section3.button }}
+                <p class="my-5">
+                    <a class="button cta rounded secondary-btn raised" href="{{ $section3.button.buttonLink }}">
+                        {{ $section3.button.buttonText }}
+                    </a>
+                </p>
+                {{ end }}
+            </div>
+            <div class="column is-half-desktop is-flex is-justify-content-center is-flex-wrap-wrap py-3">
+                {{ range $section3.qualities }}
+                <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center p-5 m-2 has-background-light" style="border-radius: 7px; width: 200px;">
+                    <img src="/images/{{ .image }}" alt="icon" style="height: 30px;">
+                    <span class="pt-3 has-text-centered">{{ .title }}</span>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

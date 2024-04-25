@@ -1,0 +1,45 @@
+{{- $section2 := .Site.Params.section2 }}
+{{- $title := index $section2 "title" }}
+{{- $subtitle := index $section2 "subtitle" }}
+{{- $features := index $section2 "features" }}
+<section class="section section-feature-grey is-medium" id="section2">
+    <div class="container">
+        <div class="columns is-flex-direction-row-reverse">
+            <div class="column is-7 mt-60">
+                <div class="media-left">
+                    <h3 class="subtitle is-5 is-muted mb-2">{{ $subtitle }}</h3>
+                    <div class="divider"></div>
+                    <h1 class="title section-title py-5">{{ $title }}</h1>
+                </div>
+                {{- range $features }}
+                <article class="media icon-box">
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <span class="icon-box-title">{{ .title }}</span>
+
+                                <span class="icon-box-text">{{ .text | markdownify }}</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                {{- end }}
+                {{ with $section2.button }}
+                <p class="my-5">
+                    <a class="button cta rounded secondary-btn raised" href="{{ $section2.button.buttonLink }}">
+                        {{ $section2.button.buttonText }}
+                    </a>
+                </p>
+                {{ end }}
+            </div>
+            <div class="column is-two-fifths-desktop is-flex is-justify-content-center is-flex-wrap-wrap py-3">
+                {{ range $section2.stats }}
+                <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center p-5 m-2 has-background-light" style="border-radius: 7px; width: 200px;">
+                    <span class="is-size-1 has-text-black has-text-weight-semibold counter">{{ .heading }}</span>
+                    <span class="pt-3 has-text-centered">{{ .text }}</span>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

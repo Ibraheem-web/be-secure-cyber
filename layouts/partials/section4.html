@@ -1,0 +1,19 @@
+<section class="section is-medium section-secondary" id="section4">
+  <div class="container">
+    <div class="has-text-centered is-size-1 pb-5">
+        <h2 class="has-text-white">Latest Blogs</h2>
+      </div>
+      <div class="columns mt-5 my-padi">
+        {{ range where .Site.RegularPages "Section" "blog" }}
+        <div class="column is-half">
+            <div class="">
+
+            </div>
+        </div>
+        <div class="column is-half">
+
+        </div>
+        {{ end }}
+      </div>
+  </div>
+</section>

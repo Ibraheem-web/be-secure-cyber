@@ -1,0 +1,187 @@
+baseURL: http://something-fresh.org/
+languageCode: en-us
+title: Be Secure Cyber
+
+module:
+  # uncomment line below for local development of module
+  # workspace: hugo.work
+  imports:
+    path: github.com/StefMa/hugo-fresh
+
+
+googleAnalytics: # Put in your tracking code without quotes like this: UA-XXX for universal tracking or G-XXX analytics v4 tracking
+# Disables warnings
+disableKinds:
+- taxonomy
+- taxonomyTerm
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allows you to write raw html in your md files
+
+params:
+  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+  openGraph: true
+  # Used as meta data; describe your site to make Google Bots happy
+  description:
+  # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
+  # preloader: false
+  navbarlogo:
+  # Logo (from static/images/logos/___)
+    image: logo.png
+    link: /
+    # Default width/height. Uncomment if you need to change
+    # width: 112
+    # height: 28
+  font:
+    name: "K2D"
+    sizes: [400,600]
+  hero:
+    pretitle: Be Secure Cyber
+    # Main hero title
+    title:  Your Trusted Partner
+    # Hero subtitle (optional)
+    subtitle: We believe that everyone deserves to be safe from cyber threats and understand that cybersecurity can be complex and overwhelming. We are passionate about simplifying the security of your business. 
+    # Button text
+    buttontext: Our Services
+    # Where the main hero button links to
+    buttonlink: "#"
+    # Hero image (from static/images/___)
+    image: hero-vector.jpg
+    # Footer logos (from static/images/logos/clients/*.svg)
+    # urls are optional
+    clientlogos:
+    - logo: trusted-partner.png
+      url: https://google.com
+    - logo: iasme.png
+      url: https://registry.blockmarktech.com/certificates/9868efb5-d1d5-4cab-a7de-075ddd8bfb65/
+    - logo: cyber-essentials.png
+      url: https://registry.blockmarktech.com/certificates/c9d42e3c-5665-4338-af7f-b52a4d833800/
+    - logo: cyber-essentials-single.png
+      url: https://registry.blockmarktech.com/certificates/ef99590d-25ec-4eed-bb2e-b9ca30e592ce/
+    - logo: iasme-single.png
+      url: https://registry.blockmarktech.com/certificates/455ecc3a-1484-476f-86e8-29f9f4b4abde/
+    - logo: iasme-single-red.png
+      url: https://registry.blockmarktech.com/certificates/f8c135d5-f9fb-4c91-bcdb-314f777fdc27/
+    - logo: national-cyber.png
+      url: https://registry.blockmarktech.com/certificates/145cec6f-7838-45cf-bd14-5f56fd9add55/
+  # Customizable navbar. For a dropdown, add a "sublinks" list.
+  navbar:
+  - title: Home
+    url: /
+  - title: Our Services
+    url: /
+  - title: About Us
+    url: /
+  - title: Blog
+    url: /
+  - title: Contact Us
+    url: /
+    button: true
+  sidebar:
+  section1:
+    # section1 content
+  section2:
+    title: Passionate About Protecting Your Business 
+    subtitle: ABOUT US
+    image: hero-vector.jpg
+    features:
+      - title:
+        text: Our team of experienced and certified cybersecurity professionals has a deep understanding of the latest cyber threats and trends. We use this knowledge to develop and implement innovative and effective cybersecurity solutions that meet the unique needs of our clients. 
+      # Icon (from /images/illustrations/icons/___.svg)
+      - title: 
+        text: We're proud to be a trusted partner to our clients, and we're committed to helping them achieve their cybersecurity goals. 
+    button: 
+      buttonText: Read More
+      buttonLink: /
+    stats:
+      - heading: 20+
+        text: Years' Experience 
+      - heading: 24/7 
+        text: Protection
+      - heading: 100%
+        text: Customer Satisfaction
+      - heading: 2.5K+ 
+        text: Attacks Prevented 
+  section3:
+    title: Tailored Solutions 
+    subtitle: WHY CHOOSE US
+    image: hero-vector.jpg
+    features:
+      - title:
+        text: We know that one size doesn't always fit all. We use our experience working with all sizes and types of organisation to provide a solution which works for you.
+    qualities: 
+      - image: arrow-down-up-lock.svg
+        title: Security Assessments
+      - image: file-solid.svg
+        title: Cyber Certifications
+      - image: table-cells-row-lock-solid.svg
+        title: Cyber Essentials
+      - image: list-check-solid.svg
+        title: Managed Security Services
+      - image: retweet-solid.svg
+        title: Vulnerability Scanning
+      - image: globe-solid.svg
+        title: Network Security
+      - image: cloud-arrow-up-solid.svg
+        title: Cloud Security
+      - image: user-shield-solid.svg
+        title: Managed Detection and Reponse
+      - image: user-shield-solid.svg
+        title: NGFW
+      - image: sliders-solid.svg
+        title: vCISO
+    button: 
+      buttonText: Read More
+      buttonLink: /
+  section4:
+    title: Our Clients love us!
+    subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
+    clients:
+    - name: Irma Walters
+      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+      job: Accountant
+      img: 1
+    - name: John Bradley
+      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+      job: Financial Analyst
+      img: 2
+    - name: Gary Blackman
+      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+      job: HR Manager
+      img: 3
+  section5:
+    title: Drop us a line or two
+    subtitle: We'd love to hear from you
+    buttonText: Send Message
+    # action: https://formspree.io/f/<form_id>
+    # method: POST
+  footer:
+    # Logo (from /images/___)
+    logo: logo.png
+    # Social Media Title
+    socialmediatitle: 
+    # Social media links (GitHub, Twitter, etc.). All are optional.
+    bulmalogo: false
+    quicklinks:
+      column1:
+        title: "Sitemap"
+        links:
+        - text: Home
+          link: /
+        - text: Services
+          link: /
+        - text: Contact
+          link: /
+        - text: About
+          link: /
+        - text: Privacy Policy
+          link: /
+      column2:
+        title: "Contact Us"
+        links:
+          - planetext: 272 Bath Street, Glasgow, G2 4JR 
+          - text: info@securecyber.co.uk
+            link: mailto:info@securecyber.co.uk
+          - text: 0330 236 8633
+            link: tel:03302368633
